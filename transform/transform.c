@@ -15,7 +15,11 @@ element.
 #include <math.h> /* exp */
 
 
-void transform(/* Put parameters here */) {}
+void transform(double (*f)(double), double *arr, len){
+    for(int i=0; i<len; i++){
+        arr[i]=(*f)(arr[i]);
+    }
+}
 
 double addOne(double x) {
     return x + 1;
